@@ -23,9 +23,9 @@ const Home = () => {
   return (
     <div className="container">
       <h1>Biblioteca de Jogos</h1>
-      <button onClick={() => navigate("/add-game")}>➕ Adicionar Jogo</button>
+      <button style={{margin:"10px"}} onClick={() => navigate("/add-game")}>➕ Adicionar Jogo</button>
 
-      <select onChange={(e) => setGeneroSelecionado(e.target.value)} value={generoSelecionado}>
+      <select style={{margin:"10px", backgroundColor:"#007BFF", color:"white", padding:"9px", border:"white"}} onChange={(e) => setGeneroSelecionado(e.target.value)} value={generoSelecionado}>
         <option value="">Todos os Gêneros</option>
         {generos.map((genero) => (
           <option key={genero.id} value={genero.id}>{genero.nome}</option>
